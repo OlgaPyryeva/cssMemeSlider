@@ -140,4 +140,20 @@ body {
 	transform: scale(1);
 }
 
+@media (max-width: 500px) {
+  .wrapper .dots {
+    position: absolute;
+    left: 60%;
+    	
+  }
+
+  .carusel {
+    width: 70%;
+    left: 15%;
+  }
+  .text {
+    width: 20%;
+  }
+}
+
 
