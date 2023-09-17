@@ -39,6 +39,11 @@ body {
 	height: inherit;
 	position: absolute;
 
+  opacity: 0;
+  z-index: 0;
+
+  transform: scale(1.5);
+  transition: transform ease-in-out 0.5s;
 }
 
 .text {
@@ -57,6 +62,11 @@ body {
 	height: inherit;
 	position: absolute;
 
+  opacity: 0;
+  z-index: 0;
+
+  transform: scale(1.5) rotate(1turn);
+  transition: transform ease-in-out 0.5s;
 }
 
 .slide1 {
@@ -117,6 +127,33 @@ body {
   background: #fff;
 }
 
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide1:checked ~ .text > .slide-text1,
+#slide2:checked ~ .text > .slide-text2,
+#slide3:checked ~ .text > .slide-text3,
+#slide4:checked ~ .text > .slide-text4 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
 
+@media (max-width: 500px) {
+  .wrapper .dots {
+    position: absolute;
+    left: 60%;
+    	
+  }
+
+  .carusel {
+    width: 70%;
+    left: 15%;
+  }
+  .text {
+    width: 20%;
+  }
+}
 
 
