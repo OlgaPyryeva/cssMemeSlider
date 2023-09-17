@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+}
+
+.wrapper {
+  width: 700px;
+  height: 350px;
+  position: relative;
+	margin: 100px auto 0;	
+}
+
+.carusel > input {
+	display: none;
+}
+
+.carusel {
+  width: 700px;
+	height: 350px;
+	position: relative;
+  background-color: #fff;
+}
+
+.slider {
+	width: 700px;
+	height: 350px;
+	position: relative;
+  top: 0;
+  left: 0;	
+}
+
+.slides {
+  width: inherit;
+	height: inherit;
+	position: absolute;
+
+}
+
+.text {
+  width: 350px;
+  height: 50px;
+	position: relative;
+  bottom: -15px;
+  left: 0;
+  font-size: 20px;
+  color: #fff;
+  z-index: 3;
+}
+
+.slides-text {
+  width: inherit;
+	height: inherit;
+	position: absolute;
+
+}
+
+.slide1 {
+  background: url(https://tn.fishki.net/26/upload/post/2021/06/20/3805643/110ce28b728b65770e5db8fe25aa0e31.jpg.webp) no-repeat;
+}
+.slide2 {
+  background: url(https://24gadget.ru/uploads/posts/2021-11/1636617839_2021-11-10-16_59_54.jpg) no-repeat;
+}
+.slide3 {
+  background: url(https://i.pinimg.com/736x/9d/6e/a8/9d6ea8040167adca3273d4834d1d0381.jpg) no-repeat;
+  background-size: 100%;
+}
+.slide4 {
+  background: url(https://cdnstatic.rg.ru/uploads/images/gallery/d171bca4/6_51eb6461.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.wrapper .dots {
+  position: absolute;
+	right: 0;
+}
+
+.wrapper label {
+  width: 8px;
+  height: 8px;
+	position: relative;
+	display: inline-block;
+	margin: 25px 12px 0 16px;
+	
+	cursor: pointer;
+	border-radius: 50%;
+
+  transition: background ease-in-out .5s;
+}
+
+.wrapper label:after {
+  content: " ";
+  width: 12px;
+  height: 12px;
+	display: block;
+	position: absolute;
+	left: -4px;
+	top: -4px;
+
+  border: 2px solid #fff;
+	border-radius: 50%;
+}
+
+.wrapper label:hover, 
+#slide1:checked ~ .dots label:nth-of-type(1),
+#slide2:checked ~ .dots label:nth-of-type(2),
+#slide3:checked ~ .dots label:nth-of-type(3),
+#slide4:checked ~ .dots label:nth-of-type(4) {
+	background: #fff;
+}
+
+.wrapper label:checked {
+  background: #fff;
+}
+
+
+
+
